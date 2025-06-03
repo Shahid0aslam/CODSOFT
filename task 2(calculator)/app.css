@@ -1,0 +1,102 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6e8efb, #a777e3);
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 320px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+#display {
+    width: 90%;
+    height: 60px;
+    font-size: 2rem;
+    text-align: right;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 2px solid gray;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    outline: none;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+button {
+    aspect-ratio: 1 / 1;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    color: #fff;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Colorful buttons */
+button:nth-child(1) { background: #ff6b6b; } /* Clear */
+button:nth-child(2) { background: #feca57; } /* Divide */
+button:nth-child(3) { background: #48dbfb; } /* Multiply */
+button:nth-child(4) { background: #1dd1a1; } /* Subtract */
+
+button:nth-child(5), 
+button:nth-child(6), 
+button:nth-child(7) { background: #576574; } /* Numbers */
+
+button:nth-child(8) { background: #ff9ff3; } /* Plus */
+
+button:nth-child(9), 
+button:nth-child(10), 
+button:nth-child(11) { background: #576574; } /* Numbers */
+
+button:nth-child(12) { background: #54a0ff; } /* Equals */
+
+button:nth-child(13), 
+button:nth-child(14), 
+button:nth-child(15), 
+button:nth-child(16) { background: #576574; } /* Numbers */
+
+button:nth-child(17) { background: #f368e0; } /* Decimal */
+
+/* Hover Effects */
+button:hover {
+    transform: translateY(-3px);
+    opacity: 0.9;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 400px) {
+    .calculator {
+        padding: 15px;
+    }
+
+    #display {
+        height: 50px;
+        font-size: 1.8rem;
+    }
+
+    button {
+        font-size: 1.3rem;
+    }
+}

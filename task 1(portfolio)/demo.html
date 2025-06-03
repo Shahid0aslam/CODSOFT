@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shahid Aslam - Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="new.css" />
+</head>
+<body>
+
+
+  <button id="menu-btn" aria-label="Toggle Menu">&#9776;</button>
+
+  <nav class="navbar" role="navigation" aria-label="Main navigation">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+
+  <div class="overlay"></div>
+
+
+  <header class="hero">
+    <h1>Shahid Aslam</h1>
+    <p>Web Developer | Java Developer | Passionate about Technology</p>
+  </header>
+
+
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <img src="shahid.jpg" alt="My Photo" />
+    <p>
+      I am a beginner web developer with knowledge of HTML, CSS, and JavaScript.
+      I enjoy creating functional and visually appealing websites.
+      Motivated web developer with a passion for designing
+      user-friendly and engaging websites from concept to completion.
+    </p>
+  </section>
+
+
+  <section id="skills" class="section">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div class="skill">
+        <span>HTML5</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 90%;"></div>
+        </div>
+        <div class="progress-text">90%</div>
+      </div>
+      <div class="skill">
+        <span>CSS3</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 85%;"></div>
+        </div>
+        <div class="progress-text">85%</div>
+      </div>
+      <div class="skill">
+        <span>JavaScript</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 75%;"></div>
+        </div>
+        <div class="progress-text">75%</div>
+      </div>
+      <div class="skill">
+        <span>Bootstrap</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 80%;"></div>
+        </div>
+        <div class="progress-text">80%</div>
+      </div>
+      <div class="skill">
+        <span>Git & GitHub</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 70%;"></div>
+        </div>
+        <div class="progress-text">70%</div>
+      </div>
+      <div class="skill">
+        <span>Java</span>
+        <div class="progress-bar">
+          <div class="progress-fill" style="width: 65%;"></div>
+        </div>
+        <div class="progress-text">65%</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <div class="project-card">
+        <img src="loginpage.png" alt="Login Page Project" />
+        <h3>Login Page</h3>
+        <p>A login page of a website using HTML and CSS.</p>
+      </div>
+      <div class="project-card">
+        <img src="alarm clock .png" alt="Alarm Clock Project" />
+        <h3>Alarm Clock</h3>
+        <p>An alarm clock website using HTML, CSS, and JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="resume" class="section">
+    <h2>Resume</h2>
+    <a href="Shahid Aslam.pdf" download>Download My Resume (PDF)</a>
+  </section>
+
+
+  <section id="contact" class="section">
+    <h2>Contact</h2>
+    <p>Email: shahid0aslam28@gmail.com</p>
+    <p>Phone (India): +91 7272935048</p>
+    <p>Phone (Nepal): +977 9807260028</p>
+  </section>
+
+
+  <footer>
+    <p>&copy; 2025 Shahid Aslam. All rights reserved.</p>
+  </footer>
+
+
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const navbar = document.querySelector('.navbar');
+    const overlay = document.querySelector('.overlay');
+
+    menuBtn.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+      overlay.classList.toggle('active');
+    });
+
+    overlay.addEventListener('click', () => {
+      navbar.classList.remove('active');
+      overlay.classList.remove('active');
+    });
+
+    document.querySelectorAll('.navbar a').forEach(link => {
+      link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+        overlay.classList.remove('active');
+      });
+    });
+  </script>
+
+</body>
+</html>
